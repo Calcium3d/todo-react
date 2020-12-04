@@ -4,7 +4,7 @@ import './components/Todos'
 import Todos from './components/Todos';
 import Header from './components/layout/header';
 import AddTodo from './components/addTodo';
-import {v4 as uuid} from 'uuid';
+import {v4 as uuidv4} from 'uuid';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
 
 
@@ -12,17 +12,17 @@ class App extends Component {
   state = {
     todos: [
       {
-        id: uuidv4,
+        id: uuidv4(),
         title: 'Take out the trash',
         completed: false
       },
       {
-        id:uuidv4,
+        id: uuidv4(),
         title: 'clean windows',
         completed: false
       },
       {
-        id:uuidv4,
+        id: uuidv4(),
         title: 'complete homework',
         completed: false
       }
@@ -53,7 +53,7 @@ class App extends Component {
 
     addTodo = (title) => {
       const newTodo = {
-        id: uuidv4,
+        id: uuidv4(),
         title: title,
         completed: false
       }
